@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+    <!-- Enhanced traffic light logic with protected phases to prevent conflicts -->
+    <!-- State string: 20 characters for linkIndex 0-19 -->
+    <!-- Links: 0-3(N), 4-7(E), 8-11(S), 12-15(W), 16-19(pedestrian crossings) -->
+    <!-- g = green, G = priority green, y = yellow, r = red -->
+    
+    <tlLogic id="J0" type="actuated" programID="adaptive" offset="0">
+        <!-- Phase 0: North through and right (links 0,1,2) - ONLY N GREEN -->
+        <phase duration="55" state="gGGgrrrrrrrrrrrrrrrr" minDur="30" maxDur="100"/>
+        <!-- Phase 1: North yellow (before south) -->
+        <phase duration="15" state="yyyyrrrrrrrrrrrrrrrr" minDur="15" maxDur="15"/>
+        <!-- Phase 2: South through and right (links 8,9,10) - ONLY S GREEN -->
+        <phase duration="55" state="rrrrrrrrggGgrrrrrrrr" minDur="30" maxDur="100"/>
+        <!-- Phase 3: South yellow (before east) -->
+        <phase duration="15" state="rrrrrrrryyyyrrrrrrrr" minDur="15" maxDur="15"/>
+        <!-- Phase 4: East through and right (links 4,5,6) - ONLY E GREEN -->
+        <phase duration="55" state="rrrrGGGgrrrrrrrrrrrr" minDur="30" maxDur="100"/>
+        <!-- Phase 5: East yellow (before west) -->
+        <phase duration="15" state="rrrryyyyrrrrrrrrrrrr" minDur="15" maxDur="15"/>
+        <!-- Phase 6: West through and right (links 12,13,14) - ONLY W GREEN -->
+        <phase duration="55" state="rrrrrrrrrrrrgGGgrrrr" minDur="30" maxDur="100"/>
+        <!-- Phase 7: West yellow (before north) -->
+        <phase duration="15" state="rrrrrrrrrrrryyyyrrrr" minDur="15" maxDur="15"/>
+        <!-- Phase 8: Pedestrian crossings green (links 16-19) -->
+        <phase duration="20" state="rrrrrrrrrrrrrrrrGGGG"/>
+        <!-- Phase 9: Pedestrian crossings yellow (links 16-19) -->
+        <phase duration="5" state="rrrrrrrrrrrrrrrryyyy"/>
+    </tlLogic>
+</additional>

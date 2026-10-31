@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <!-- ================= INPUT FILES ================= -->
+    <input>
+        <net-file value="intersection.net.xml"/>
+        <route-files value="routes.rou.xml"/>
+        <additional-files value="detectors.add.xml,tls.add.xml"/>
+    </input>
+
+    <gui_only>
+        <gui-settings-file value="gui-settings.xml"/>
+    </gui_only>
+
+    <routing>
+        <random>true</random>
+    </routing>
+
+    <!-- ================= TIME SETTINGS ================= -->
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <!-- ================= GUI SETTINGS ================= -->
+    <gui_only>
+        <delay value="500"/>
+    </gui_only>
+
+    <!-- ================= REPORTING ================= -->
+    <report>
+        <log value="sumo.log"/>
+    </report>
+
+
+</configuration>
