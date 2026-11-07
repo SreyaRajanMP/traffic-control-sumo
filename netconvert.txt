@@ -1,1 +1,0 @@
-netconvert --node-files nodes.nod.xml --edge-files edges.edg.xml --output-file intersection.net.xml --no-turnarounds true --crossings.guess true
