@@ -97,7 +97,6 @@ The SUMO GUI and the traffic monitoring / override windows open automatically.
 | `detectors.add.xml` | Traffic detector configuration |
 | `tls.add.xml` | Traffic-light program definitions |
 | `gui-settings.xml` | SUMO GUI appearance settings |
-| `netconvert.txt` | Command used to generate the network |
 
 Simulation outputs such as `sumo.log` and `camera-output.xml` are produced at run time and are not tracked in git.
 
